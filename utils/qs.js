@@ -3,8 +3,9 @@ global.navigator = {appName: 'nodejs'}; // fake the navigator object
 global.window = {}; // fake the window object
 const jsencrypt = require('jsencrypt');
 const pubkey = require('./pubkey')
+var PUBLIC_KEY = 'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDlYsiV3DsG+t8OFMLyhdmG2P2J4GJwmwb1rKKcDZmTxEphPiYTeFIg4IFEiqDCATAPHs8UHypphZTK6LlzANyTzl9LjQS6BYVQk81LhQ29dxyrXgwkRw9RdWaMPtcXRD4h6ovx6FQjwQlBM5vaHaJOHhEorHOSyd/deTvcS+hRSQIDAQAB'
 const encrypt = new jsencrypt()
-encrypt.setPublicKey(pubkey)
+encrypt.setPublicKey(PUBLIC_KEY)
 const data = qs.stringify({
 account: process.env.ACCOUNT,
 password: process.env.PASSWORD,
