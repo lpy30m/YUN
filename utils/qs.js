@@ -6,13 +6,21 @@ const pubkey = require('./pubkey')
 var PUBLIC_KEY = 'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDlYsiV3DsG+t8OFMLyhdmG2P2J4GJwmwb1rKKcDZmTxEphPiYTeFIg4IFEiqDCATAPHs8UHypphZTK6LlzANyTzl9LjQS6BYVQk81LhQ29dxyrXgwkRw9RdWaMPtcXRD4h6ovx6FQjwQlBM5vaHaJOHhEorHOSyd/deTvcS+hRSQIDAQAB'
 const encrypt = new jsencrypt()
 encrypt.setPublicKey(PUBLIC_KEY)
-const data = qs.stringify({
-account: process.env.ACCOUNT,
-password: process.env.PASSWORD,
-school_id: process.env.SCHOOL_ID,
-request_source: 3,
-system: '5.1.1'
-})
+ const data = qs.stringify({
+            'app_version': "4.6.44",
+            'registration_id': '',
+            'uuid': '',
+            'request_source': '3',
+            'platform': '2',
+            'mac':"CA:DE:D9:FD:1E:F7",
+            'password': "Li0830m.",
+            'system': '9',
+            'school_id': 7,
+            'model': "iphone",
+            'app_id': 'cn.vanber.xixunyun.saas',
+            'account': "21071230210",
+            'key': ''
+        })
 
 
 const signdata = qs.stringify({
