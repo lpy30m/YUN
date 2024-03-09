@@ -38,7 +38,8 @@ function sign(token) {
 }
 
 //日报提交
-
+function studentReportInfo(token) {
+}
 
 //推送微信通知
 function wechatSend(type, msg) {
