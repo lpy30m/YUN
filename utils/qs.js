@@ -42,9 +42,12 @@ const reportdata = (family_name, family_phone) => {
 }
 
 const headers = {
-  'content-type': 'application/x-www-form-urlencoded'
-}
-const loginApi = 'https://api.xixunyun.com/login/api?from=app&version=5.1.1&platform=android'
+            'Host': 'api.xixunyun.com',
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Accept-Encoding': 'gzip',
+            'User-Agent': 'okhttp/3.8.1'
+        }
+const loginApi = 'https://api.xixunyun.com/login/api?platform=1&from=app&school_id=7&version=4.6.44'
 const signApi = (token) => {
   return `https://api.xixunyun.com/signin_rsa?token=${token}&from=app&version=5.1.1&platform=android&entrance_year=0&graduate_year=0&school_id=${process.env.SCHOOL_ID}`
 }
